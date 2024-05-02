@@ -1,0 +1,9 @@
+img{
+    height:40px;
+    width: 40px;
+}
+.icon{
+    color: black;
+    cursor: "pointer";
+    margin-left: "2px",
+}
