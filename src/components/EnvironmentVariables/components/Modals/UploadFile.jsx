@@ -17,18 +17,18 @@ const UploadFile = ({ open, setOpen, data, setData }) => {
     setFile(file);
     try {
       const { contents, isBelowThreshold } = await readFile(file);
-      // if (isBelowThreshold) {
-      //   console.log("File size is below 5KB threshold.");
-      // } else {
-      const variables = parseEnvVariables(contents);
+      if (!isBelowThreshold) {
+        console.log("File size should be below 5KB.");
+      } else {
+        const variables = parseEnvVariables(contents);
 
-      const variablesWithIds = variables.map((variable) => ({
-        id: uniqid(),
-        ...variable,
-      }));
+        const variablesWithIds = variables.map((variable) => ({
+          id: uniqid(),
+          ...variable,
+        }));
 
-      setEnvData(variablesWithIds);
-      // }
+        setEnvData(variablesWithIds);
+      }
     } catch (error) {
       console.error("Error reading file:", error);
     }
