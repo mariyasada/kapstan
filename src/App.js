@@ -78,8 +78,8 @@ function App() {
           <Landingpage selectedOption={selectedApp} />
         </Box>
       ) : (
-        <Box>
-          <Typography variant={"h6"} color={"blue"}>
+        <Box sx={{ margin: "auto" }}>
+          <Typography variant={"h3"} color={"blue"}>
             Loading....
           </Typography>
         </Box>

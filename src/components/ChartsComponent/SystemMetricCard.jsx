@@ -13,6 +13,8 @@ import {
 import "./tooltip.css";
 import { useFetch } from "../customHook/useFetch";
 
+// Note: charts's lines looking like this because the array length is 100 and  we can't map 100 timetamps on this size.
+
 const TabsOptions = ["CPU", "Memory"];
 const names = [
   { name: "tic-tac-toc", id: "1" },
