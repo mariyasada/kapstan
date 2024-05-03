@@ -26,7 +26,7 @@ const UploadFile = ({ open, setOpen, data, setData }) => {
         id: uniqid(),
         ...variable,
       }));
-      console.log(variablesWithIds, "check");
+
       setEnvData(variablesWithIds);
       // }
     } catch (error) {
