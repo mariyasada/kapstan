@@ -16,7 +16,11 @@ const ChartsCard = (props) => {
       }}
       maxWidth="xl"
     >
-      <ServiceCard desiredVersion={desiredVersion} updatedAt={updatedAt} />
+      <ServiceCard
+        desiredVersion={desiredVersion}
+        updatedAt={updatedAt}
+        status={status}
+      />
       <Box
         sx={{
           display: "flex",

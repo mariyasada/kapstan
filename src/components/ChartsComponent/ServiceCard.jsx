@@ -1,13 +1,9 @@
 import { Button, Card, Typography, Box } from "@mui/material";
 import React from "react";
 import { IoIosCheckmarkCircleOutline, IoIosArrowUp } from "react-icons/io";
+import { getTime } from "../commonFunction";
 
-const ServiceCard = ({ desiredVersion, updatedAt }) => {
-  const getTime = (updatedAt) => {
-    const updatedAtDate = new Date(updatedAt * 1000);
-    const hours = updatedAtDate.getHours();
-    return hours;
-  };
+const ServiceCard = ({ desiredVersion, updatedAt, status }) => {
   return (
     <Card
       sx={{
@@ -75,7 +71,10 @@ const ServiceCard = ({ desiredVersion, updatedAt }) => {
               gap: "4px",
             }}
           >
-            <IoIosCheckmarkCircleOutline color="#00B88C" size={20} /> In sync
+            {status == "deployed" && (
+              <IoIosCheckmarkCircleOutline color="#00B88C" size={20} />
+            )}{" "}
+            {status !== "deployed" ? "Not in sync" : "In sync"}
           </Typography>
         </Box>
         <Box>
@@ -115,7 +114,7 @@ const ServiceCard = ({ desiredVersion, updatedAt }) => {
             fontSize: "12px",
             color: "#595959",
           }}
-        >{`Last updated ${getTime(updatedAt)} hours ago`}</Typography>
+        >{`Last updated ${getTime(updatedAt).hours} hours ago`}</Typography>
       </Box>
     </Card>
   );

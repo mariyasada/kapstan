@@ -1,6 +1,5 @@
 export const containerStyle = {
   display: "flex",
-  background: "red",
   overflow: "hidden",
   padding: "0px",
 };
@@ -59,4 +58,37 @@ export const topNav = {
   padding: "12px 32px 0px 32px",
   borderBottom: "1px solid #C0C0C0",
 };
-export const userMenu = {};
+export const rowStyle = {
+  height: "60px",
+  padding: "0px 16px",
+  paddingLeft: "30px",
+};
+export const cellStyle = {
+  width: "99px",
+  borderRadius: "4px",
+  padding: "3px 8px 3px 4px",
+  display: "flex",
+  alignItems: "center",
+  gap: "4px",
+  fontSize: "12px",
+  textAlign: "center",
+};
+
+export const successStyle = {
+  border: "1px solid #00B88C",
+  background: "#F0FCF9",
+  color: "#00B88C",
+  fontWeight: "500",
+};
+export const failedStyle = {
+  border: "1px solid #E91F04",
+  background: "#FEF4F2",
+  color: "#E91F04",
+  fontWeight: "500",
+};
+export const InprogressStyle = {
+  border: "1px solid #F39C12",
+  background: "#FEF5E6",
+  color: "#F39C12",
+  fontWeight: "500",
+};

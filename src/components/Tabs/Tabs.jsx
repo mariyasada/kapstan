@@ -3,8 +3,7 @@ import { GoDotFill } from "react-icons/go";
 
 export const CustomizedTabs = ({ TabsOptions, currentTab, setCurrentTab }) => {
   const handleChange = (event, newValue) => {
-    console.log(newValue, "check");
-    setCurrentTab(newValue); // Update the selected tab state
+    setCurrentTab(newValue);
   };
   return (
     <Tabs

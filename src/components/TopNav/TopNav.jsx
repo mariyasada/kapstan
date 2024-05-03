@@ -48,7 +48,6 @@ const TopNav = ({ options, selectedApp, setSelectedApp }) => {
   };
 
   const handleUserChange = (option) => {
-    console.log(option, "check");
     setSelectedUser(option);
     handleCloseMenu();
   };

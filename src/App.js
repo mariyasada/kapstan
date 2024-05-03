@@ -1,4 +1,4 @@
-import { Container, Box } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { containerStyle } from "././Styles/Styles.js";
@@ -54,14 +54,6 @@ function App() {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   if (!appData) {
-  //     setAppData([{ name: "tic-tac-toe" }]);
-  //   } else if (appData.length > 0) {
-  //     setAppData(appData);
-  //   }
-  // }, [appData]);
-
   return (
     <Container maxWidth="xl" sx={{ ...containerStyle }} disableGutters={true}>
       <Sidebar
@@ -69,13 +61,13 @@ function App() {
         selectedOpt={selectedOption}
         setSelectedOpt={setSelectedOption}
       />
-      {dataFetched && (
+      {dataFetched ? (
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             background: "#F8F8F8",
-            width: "100%",
+            width: "99vw",
           }}
         >
           <TopNav
@@ -84,6 +76,12 @@ function App() {
             setSelectedApp={setSelectedApp}
           />
           <Landingpage selectedOption={selectedApp} />
+        </Box>
+      ) : (
+        <Box>
+          <Typography variant={"h6"} color={"blue"}>
+            Loading....
+          </Typography>
         </Box>
       )}
     </Container>

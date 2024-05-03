@@ -28,7 +28,7 @@ const Landingpage = ({ selectedOption }) => {
         width: "98%",
       }}
     >
-      <Box sx={{ width: "100%", display: "flex", height: "26px" }}>
+      <Box sx={{ width: "99%", display: "flex", height: "26px" }}>
         <Box>
           <Typography
             variant="body1"
